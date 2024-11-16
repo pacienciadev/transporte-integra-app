@@ -14,13 +14,13 @@ pipeline {
 
         stage('Lint to find errors') { 
             steps {
-                bat 'eslint .' 
+                bat 'npx eslint .' 
             }
         }
         
         stage('Build App') { 
             steps {
-                bat 'tsc -b && vite build' 
+                bat 'npx tsc -b && npx vite build' 
             }
         }
     }
